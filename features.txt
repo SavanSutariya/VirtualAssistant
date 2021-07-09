@@ -1,0 +1,17 @@
+pending{
+    1.greeting message
+    2.open website
+    3.play music
+    4.speech recognition
+    5.speak functionality
+    6.face recognition
+    7.chatbot
+    8.scedule
+}
+done{
+    1.check internet
+    2.update name
+    3.time
+    4.learn new questions
+    5.wikipedia
+}
