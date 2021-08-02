@@ -1,5 +1,6 @@
 from output_module import output
 import datetime
+import random
 def greet():
     """
     Wishes user and introduces itself
@@ -11,3 +12,6 @@ def greet():
         output("Good Afternoon")
     else:
         output("Good Evening")
+def sayGoodBye():
+    lst = ['Bye Bye','Bye','See you later','See you soon','have a good day','good bye','Catch you later']
+    return random.choice(lst)

@@ -3,6 +3,8 @@ from database import get_answers_from_memory,insert_question_and_answer,change_a
 from output_module import output
 from input_module import take_input
 from internet import internet_access,check_wikipedia
+from system_control import take_screenshot
+from greeting_module import sayGoodBye
 import system_details
 
 def process(query):
@@ -26,7 +28,15 @@ def process(query):
             change_assis_name(temp)
             system_details.sys_name = temp
             return "Now you can call me " + temp
-    
+    elif answer == "take screenshot":
+        output("Taking Screenshot..")
+        try:
+            return "Screenshot saved at "+take_screenshot()
+        except:
+            return(PermissionError)
+    elif answer == "exit":
+        output(sayGoodBye())
+        exit()
     else:
         output("Should I search on internet for it?")
         temp = take_input()

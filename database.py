@@ -42,3 +42,10 @@ def change_assis_name(arg):
     query = "UPDATE memory SET value = '"+arg+"' WHERE name = 'assistant name'"
     cur.execute(query)
     con.commit()
+
+def get_settings():
+    con = create_connection()
+    cur = con.cursor()
+    query = "select * from settings"
+    cur.execute(query)
+    return cur.fetchall()
