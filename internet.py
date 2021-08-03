@@ -15,6 +15,6 @@ def check_wikipedia(query):
     query = query.strip()
     try:
         data = wikipedia.summary(query, sentences=2)
-        return data
+        return "wikipedia says, "+data
     except Exception as e:    
         return ""

@@ -2,6 +2,7 @@ import pyautogui
 import datetime
 from settings import settings
 import os
+
 def take_screenshot():
     try:
         screenshot = pyautogui.screenshot()
@@ -19,3 +20,5 @@ def take_screenshot():
         return location
     except:
         raise PermissionError('Cannot take screenshot')
+
+print(take_screenshot())

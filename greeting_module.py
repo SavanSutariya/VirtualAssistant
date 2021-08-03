@@ -14,4 +14,4 @@ def greet():
         output("Good Evening")
 def sayGoodBye():
     lst = ['Bye Bye','Bye','See you later','See you soon','have a good day','good bye','Catch you later']
-    return random.choice(lst)
+    return random.choice(lst)+"!"
