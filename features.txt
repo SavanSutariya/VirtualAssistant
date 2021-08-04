@@ -1,12 +1,10 @@
 pending{
-    1.greeting message
-    2.open website
-    3.play music
-    4.speech recognition
-    5.speak functionality
-    6.face recognition
-    7.chatbot
-    8.scedule
+    - open website
+    - play music
+    - speech recognition
+    - face recognition
+    - chatbot
+    - scedule
 }
 done{
     1.check internet
@@ -14,4 +12,7 @@ done{
     3.time
     4.learn new questions
     5.wikipedia
+    6.Take screenshot
+    7.greeting message
+    8.speak functionality
 }
