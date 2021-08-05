@@ -11,7 +11,7 @@ def take_screenshot():
         if(os.path.exists(location)):
             screenshot.save(location+date+"_screenshot.png")
         else:
-            location = os.path.expanduser('~\downloads')+"/screenshots/"
+            location = os.path.expanduser('~/downloads')+"/screenshots/"
             try:
                 os.stat(location)
             except:
