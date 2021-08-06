@@ -16,4 +16,6 @@ greet()
 while (True):
     i = take_input()
     o = process(i)
+    if o == None:
+        continue
     output(o)   

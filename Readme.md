@@ -18,6 +18,16 @@ git clone https://github.com/SavanSutariya/VirtualAssistant
 pip install -r requirements.txt
 python main.py
 ```
+### Before using Speech Recognition
+windows
+```bash
+
+```
+Mac
+```bash
+brew install portaudio
+pip install pyaudio
+```
 
   
 ## Gives response to

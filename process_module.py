@@ -11,6 +11,8 @@ def process(query):
     """
     Process the query and return output
     """
+    if query == "":
+        return None
     answer = get_answers_from_memory(query)
     if answer == "get time details":
         return get_time()
