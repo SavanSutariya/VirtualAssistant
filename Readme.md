@@ -21,8 +21,10 @@ python main.py
 ### Before using Speech Recognition
 windows
 ```bash
-
+pip install modules/PyAudio-0.2.11-cp39-cp39-win_amd64.whl
 ```
+>If this WHL file do not work for you then [download pyaudio WHL](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio) according to your system
+
 Mac
 ```bash
 brew install portaudio
@@ -57,5 +59,4 @@ Siri and Cortana can not take screenshot😜
 ## Authors
 
 - [@SavanSutariya](https://www.github.com/SavanSutariya)
-
   
