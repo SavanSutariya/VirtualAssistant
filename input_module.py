@@ -17,7 +17,8 @@ def TakeCommand():
         print(msg2, end='')
         print('\b' * len(msg2), end='', flush=True)
         query = r.recognize_google(audio,language='en-in')
-        print(f"Me: {query}\n")
+        print(f"Me: {query}", end ='')
+        print((' '*(12-len(query))))
 
     except:
         return ""
