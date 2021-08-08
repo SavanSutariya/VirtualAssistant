@@ -1,7 +1,5 @@
 pending{
-    - open website
     - play music
-    - speech recognition
     - face recognition
     - chatbot
     - scedule
@@ -15,4 +13,6 @@ done{
     6.Take screenshot
     7.greeting message
     8.speak functionality
+    9.speech recognition
+    10.open website
 }

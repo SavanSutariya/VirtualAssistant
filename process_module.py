@@ -1,8 +1,9 @@
+import webbrowser
 from time_module import get_time
 from database import get_answers_from_memory,insert_question_and_answer,change_assis_name
 from output_module import output
 from input_module import take_input
-from internet import internet_access,check_wikipedia
+from internet import internet_access,check_wikipedia,open_web
 from system_control import take_screenshot
 from greeting_module import sayGoodBye
 import system_details
@@ -11,10 +12,15 @@ def process(query):
     """
     Process the query and return output
     """
+    answer = get_answers_from_memory(query)
     if query == "":
         return None
-    answer = get_answers_from_memory(query)
-    if answer == "get time details":
+    elif 'open' in query:
+        if(open_web(query)):
+            return None
+        else:
+            return "Open application Feature Under development"
+    elif answer == "get time details":
         return get_time()
     elif answer == "check internet connection":
         if internet_access() == True:
@@ -40,7 +46,7 @@ def process(query):
         output(sayGoodBye())
         exit()
     else:
-        output("Should I search on internet for it?")
+        output("Should I search on wikipedia for it?")
         temp = take_input()
         if "yes" in temp.lower():
             answer = check_wikipedia(query)

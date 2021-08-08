@@ -49,3 +49,10 @@ def get_settings():
     query = "select * from settings"
     cur.execute(query)
     return cur.fetchall()
+
+def get_web_dir(site):
+    con = create_connection()
+    cur = con.cursor()
+    query = "select * from webdir where name ='"+ site+"'";
+    cur.execute(query)
+    return cur.fetchall()
