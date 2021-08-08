@@ -42,6 +42,7 @@ pip install pyaudio
 
 - Learn new questions (based on existing question)
 - Change it's name
+- Opens website from website directory(database)
 
 ## Fun Fact
 
