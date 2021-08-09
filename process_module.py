@@ -3,7 +3,7 @@ from time_module import get_time
 from database import get_answers_from_memory,insert_question_and_answer,change_assis_name
 from output_module import output
 from input_module import take_input
-from internet import internet_access,check_wikipedia,open_web
+from internet import internet_access,check_wikipedia,open_web,add_new_web_address
 from system_control import take_screenshot
 from greeting_module import sayGoodBye
 import system_details
@@ -20,6 +20,8 @@ def process(query):
             return None
         else:
             return "Open application Feature Under development"
+    elif answer == "add new web address":
+        return add_new_web_address()
     elif answer == "get time details":
         return get_time()
     elif answer == "check internet connection":

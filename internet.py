@@ -3,6 +3,7 @@ import urllib.request
 import wikipedia
 import webbrowser
 from database import get_web_dir
+from gui.input_module import gui_input
 def internet_access():
     try:
         urllib.request.urlopen('http://google.com')
@@ -28,5 +29,10 @@ def open_web(query):
         return webbrowser.open_new_tab(webdir[site])
     else:
         return False
+def add_new_web_address():
+    site_name = gui_input('Site Name')
+    site_address = gui_input('Site Address')
+    # Continue from here tomorrow
 
+add_new_web_address()
 
