@@ -2,7 +2,7 @@ from os import replace
 import urllib.request
 import wikipedia
 import webbrowser
-from database import get_web_dir
+from database import get_web_dir,add_web_dir
 from gui.input_module import gui_input
 def internet_access():
     try:
@@ -32,7 +32,8 @@ def open_web(query):
 def add_new_web_address():
     site_name = gui_input('Site Name')
     site_address = gui_input('Site Address')
-    # Continue from here tomorrow
-
-add_new_web_address()
+    if(site_name.replace(' ','') == '' and site_address.replace(' ','') == ''):
+        return "Both the fields are required"
+    else:
+        return add_web_dir(site_name,site_address)
 

@@ -56,3 +56,17 @@ def get_web_dir(site):
     query = "select * from webdir where name ='"+ site+"'";
     cur.execute(query)
     return cur.fetchall()
+
+def add_web_dir(site,url):
+    if(len(get_web_dir(site))<1):
+        con = create_connection()
+        cur = con.cursor()
+        query = "INSERT INTO webdir VALUES('"+site+"','"+url+"')"
+        cur.execute(query)
+        con.commit()
+        return "Added "+site+" in the directory successfully!"
+    else:
+        return site+" is already available"
+
+lst = add_web_dir('instagram','https://www.instagram.com/')
+print(lst)
