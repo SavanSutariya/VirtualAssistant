@@ -67,6 +67,3 @@ def add_web_dir(site,url):
         return "Added "+site+" in the directory successfully!"
     else:
         return site+" is already available"
-
-lst = add_web_dir('instagram','https://www.instagram.com/')
-print(lst)
