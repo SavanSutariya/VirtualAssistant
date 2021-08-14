@@ -1,4 +1,3 @@
-import webbrowser
 from time_module import get_time
 from database import get_answers_from_memory,insert_question_and_answer,change_assis_name
 from output_module import output
@@ -47,24 +46,21 @@ def process(query):
     elif answer == "exit":
         output(sayGoodBye())
         exit()
+    elif 'search wikipedia' in query:
+        answer = check_wikipedia(query)
+        return answer
     else:
-        output("Should I search on wikipedia for it?")
-        temp = take_input()
-        if "yes" in temp.lower():
-            answer = check_wikipedia(query)
-            if answer != "":
-                return answer
-        else:
-            output("I don't know this one can you tell me what it actually mean \nstart with it means.. and I will remember for next time")
-            ans = take_input()
-            if "it means" in ans:
-                ans.replace("it means","")
-                ans.strip()
-                value = get_answers_from_memory(ans)
-                if value == "":
-                    return "Sorry, can't help with this one"
-                else:
-                    insert_question_and_answer(query, value)
-                    return"ok, i will remember from next time"
-            else:
+        output("Could not get this one.")
+        print("Say it means, [existing question]. And I will remember this.")
+        ans = take_input()
+        if "it means" in ans:
+            ans.replace("it means","")
+            ans.strip()
+            value = get_answers_from_memory(ans)
+            if value == "":
                 return "Sorry, can't help with this one"
+            else:
+                insert_question_and_answer(query, value)
+                return"ok, i will remember from next time"
+        else:
+            return None
