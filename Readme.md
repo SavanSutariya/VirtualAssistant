@@ -7,7 +7,7 @@
     
 ## Install
 
-Before Installing packages first create and activate [Virtual Environment](https://linktodocumentation)
+Before Installing packages first create and activate [Virtual Environment](https://docs.python.org/3/tutorial/venv.html)
 
 ### Download
 ```bash
